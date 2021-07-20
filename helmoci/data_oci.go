@@ -72,7 +72,7 @@ func dataOciRead(ctx context.Context, d *schema.ResourceData, meta interface{}) 
 		Tag:  tag,
 	}
 
-	_, err := client.PullChart(chartRef)
+	err := client.PullChartToCache(chartRef)
 
 	if err != nil {
 		return diag.FromErr(err)
