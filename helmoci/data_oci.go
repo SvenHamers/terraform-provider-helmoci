@@ -26,7 +26,7 @@ func dataOci() *schema.Resource {
 			},
 			"chart_url": {
 				Type:        schema.TypeString,
-				Optional:    false,
+				Required:    true,
 				Description: "full chart url",
 			},
 			"registry_username": {
